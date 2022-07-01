@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Dev QA',
   tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -24,7 +24,15 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en','bn'],
+    localeConfigs:{
+      en:{
+        label: 'English',
+      },
+      bn:{
+        label: 'বাংলা',
+      }
+    }
   },
 
   presets: [
@@ -57,7 +65,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Dev QA',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -75,6 +83,12 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {type: "localeDropdown",
+            position: 'right',
+          },
+          {type: 'search', 
+          position: 'right'
+        },
         ],
       },
       footer: {
